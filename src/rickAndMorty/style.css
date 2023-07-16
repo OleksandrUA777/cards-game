@@ -1,0 +1,97 @@
+@font-face {
+    font-family: toxic;
+    src: url(./Toxia-OwOA.ttf);
+}
+/* text blue - #02afcd
+green shadow - a9c516
+main green #62e700
+
+*/
+body{
+    font-weight: 600;
+    font-family: toxic;
+    letter-spacing: 4px;
+    background-image: url(https://a-static.besthdwallpaper.com/rick-and-morty-family-wallpaper-1152x768-89889_36.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+img{
+    width: 100%;
+}
+.menu{
+    letter-spacing: 2px;
+    text-decoration: none;
+    color: rgba(255, 0, 0, 0.9);
+}
+.container{
+    /* outline: 2px solid red;  */
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 800px;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}   
+.box{
+    /* display: flex;
+    flex-wrap: wrap;
+    gap: 10px */
+    display: grid;
+    grid-template-columns: repeat(4,160px);
+    grid-template-rows: repeat(4,160px);
+    gap: 10px;
+}
+.card{  
+    box-shadow: 0 3px 10px rgba(200,200,200,0.9);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    /* ефект перегортування картки */
+    transform-style: preserve-3d;
+}
+.card__name{
+    text-align: center;
+}
+.front, .back{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    /* покемони не вилазять на front */
+    backface-visibility: hidden;
+    transition: transform 500ms linear;
+}
+.front{
+    background-image: url("/src/rickAndMorty/logo.webp");
+    background-size: 100px 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #c7ff00;
+}
+.rotated{
+    transform: rotateY(180deg);
+}
+button{
+    border: 2px solid white;
+    width: 100px;
+    height: 30px;
+    border-radius: 17px;
+    background-color: black;
+    color: white;
+    
+    transition: background-color 250ms linear;
+    transition: color 250ms linear;
+    
+}
+.is-hidden{
+    display: none;
+}
+.moves-text{
+    margin-top: 0;
+}
+

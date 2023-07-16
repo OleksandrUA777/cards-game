@@ -1,0 +1,99 @@
+@font-face {
+  font-family: toxic;
+  src: url("../Toxia-OwOA.76368ef8.ttf");
+}
+
+body {
+  letter-spacing: 4px;
+  background-image: url("https://a-static.besthdwallpaper.com/rick-and-morty-family-wallpaper-1152x768-89889_36.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: toxic;
+  font-weight: 600;
+}
+
+img {
+  width: 100%;
+}
+
+.menu {
+  letter-spacing: 2px;
+  color: #ff0000e6;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 800px;
+  outline: 2px solid red;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.box {
+  grid-template-rows: repeat(4, 160px);
+  grid-template-columns: repeat(4, 160px);
+  gap: 10px;
+  display: grid;
+}
+
+.card {
+  transform-style: preserve-3d;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 3px 10px #c8c8c8e6;
+}
+
+.card__name {
+  text-align: center;
+}
+
+.front, .back {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  justify-content: center;
+  align-items: center;
+  transition: transform .5s linear;
+  display: flex;
+  position: absolute;
+}
+
+.front {
+  background-color: #c7ff00;
+  background-image: url("../logo.d89c30ef.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100px 100px;
+}
+
+.rotated {
+  transform: rotateY(180deg);
+}
+
+button {
+  width: 100px;
+  height: 30px;
+  color: #fff;
+  background-color: #000;
+  border: 2px solid #fff;
+  border-radius: 17px;
+  transition: color .25s linear;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.moves-text {
+  margin-top: 0;
+}
+
+/*# sourceMappingURL=index.0f0af112.css.map */
